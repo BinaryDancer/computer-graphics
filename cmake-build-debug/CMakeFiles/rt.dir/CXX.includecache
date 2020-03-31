@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/pavelmamaev/Desktop/task1_src/Bitmap.h
+
+/Users/pavelmamaev/Desktop/task1_src/Scene.h
+mygeometry.h
+/Users/pavelmamaev/Desktop/task1_src/mygeometry.h
+
+/Users/pavelmamaev/Desktop/task1_src/main.cpp
+iostream
+-
+cstdint
+-
+string
+-
+vector
+-
+unordered_map
+-
+Bitmap.h
+/Users/pavelmamaev/Desktop/task1_src/Bitmap.h
+Scene.h
+/Users/pavelmamaev/Desktop/task1_src/Scene.h
+
+/Users/pavelmamaev/Desktop/task1_src/mygeometry.h
+cstdlib
+-
+cmath
+-
+climits
+-
+cassert
+-
+utility
+-
+
