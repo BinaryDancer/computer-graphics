@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/pavelmamaev/Desktop/task1_src
+CMAKE_SOURCE_DIR = /Users/pavelmamaev/GIT/computer-graphics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/pavelmamaev/Desktop/task1_src/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rt.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/rt.dir/flags.make
 
 CMakeFiles/rt.dir/main.cpp.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pavelmamaev/Desktop/task1_src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rt.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rt.dir/main.cpp.o -c /Users/pavelmamaev/Desktop/task1_src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rt.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rt.dir/main.cpp.o -c /Users/pavelmamaev/GIT/computer-graphics/main.cpp
 
 CMakeFiles/rt.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rt.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pavelmamaev/Desktop/task1_src/main.cpp > CMakeFiles/rt.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pavelmamaev/GIT/computer-graphics/main.cpp > CMakeFiles/rt.dir/main.cpp.i
 
 CMakeFiles/rt.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rt.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pavelmamaev/Desktop/task1_src/main.cpp -o CMakeFiles/rt.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pavelmamaev/GIT/computer-graphics/main.cpp -o CMakeFiles/rt.dir/main.cpp.s
 
 CMakeFiles/rt.dir/Bitmap.cpp.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/Bitmap.cpp.o: ../Bitmap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pavelmamaev/Desktop/task1_src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rt.dir/Bitmap.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rt.dir/Bitmap.cpp.o -c /Users/pavelmamaev/Desktop/task1_src/Bitmap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rt.dir/Bitmap.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rt.dir/Bitmap.cpp.o -c /Users/pavelmamaev/GIT/computer-graphics/Bitmap.cpp
 
 CMakeFiles/rt.dir/Bitmap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rt.dir/Bitmap.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pavelmamaev/Desktop/task1_src/Bitmap.cpp > CMakeFiles/rt.dir/Bitmap.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pavelmamaev/GIT/computer-graphics/Bitmap.cpp > CMakeFiles/rt.dir/Bitmap.cpp.i
 
 CMakeFiles/rt.dir/Bitmap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rt.dir/Bitmap.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pavelmamaev/Desktop/task1_src/Bitmap.cpp -o CMakeFiles/rt.dir/Bitmap.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pavelmamaev/GIT/computer-graphics/Bitmap.cpp -o CMakeFiles/rt.dir/Bitmap.cpp.s
 
 CMakeFiles/rt.dir/Scene.cpp.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/Scene.cpp.o: ../Scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pavelmamaev/Desktop/task1_src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rt.dir/Scene.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rt.dir/Scene.cpp.o -c /Users/pavelmamaev/Desktop/task1_src/Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rt.dir/Scene.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rt.dir/Scene.cpp.o -c /Users/pavelmamaev/GIT/computer-graphics/Scene.cpp
 
 CMakeFiles/rt.dir/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rt.dir/Scene.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pavelmamaev/Desktop/task1_src/Scene.cpp > CMakeFiles/rt.dir/Scene.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pavelmamaev/GIT/computer-graphics/Scene.cpp > CMakeFiles/rt.dir/Scene.cpp.i
 
 CMakeFiles/rt.dir/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rt.dir/Scene.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pavelmamaev/Desktop/task1_src/Scene.cpp -o CMakeFiles/rt.dir/Scene.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pavelmamaev/GIT/computer-graphics/Scene.cpp -o CMakeFiles/rt.dir/Scene.cpp.s
 
 # Object files for target rt
 rt_OBJECTS = \
@@ -110,7 +110,7 @@ rt: CMakeFiles/rt.dir/Bitmap.cpp.o
 rt: CMakeFiles/rt.dir/Scene.cpp.o
 rt: CMakeFiles/rt.dir/build.make
 rt: CMakeFiles/rt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/pavelmamaev/Desktop/task1_src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable rt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable rt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/rt.dir/clean:
 .PHONY : CMakeFiles/rt.dir/clean
 
 CMakeFiles/rt.dir/depend:
-	cd /Users/pavelmamaev/Desktop/task1_src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/pavelmamaev/Desktop/task1_src /Users/pavelmamaev/Desktop/task1_src /Users/pavelmamaev/Desktop/task1_src/cmake-build-debug /Users/pavelmamaev/Desktop/task1_src/cmake-build-debug /Users/pavelmamaev/Desktop/task1_src/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/pavelmamaev/GIT/computer-graphics /Users/pavelmamaev/GIT/computer-graphics /Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug /Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug /Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rt.dir/depend
 

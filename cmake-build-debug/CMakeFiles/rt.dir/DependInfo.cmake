@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/pavelmamaev/Desktop/task1_src/Bitmap.cpp" "/Users/pavelmamaev/Desktop/task1_src/cmake-build-debug/CMakeFiles/rt.dir/Bitmap.cpp.o"
-  "/Users/pavelmamaev/Desktop/task1_src/Scene.cpp" "/Users/pavelmamaev/Desktop/task1_src/cmake-build-debug/CMakeFiles/rt.dir/Scene.cpp.o"
-  "/Users/pavelmamaev/Desktop/task1_src/main.cpp" "/Users/pavelmamaev/Desktop/task1_src/cmake-build-debug/CMakeFiles/rt.dir/main.cpp.o"
+  "/Users/pavelmamaev/GIT/computer-graphics/Bitmap.cpp" "/Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug/CMakeFiles/rt.dir/Bitmap.cpp.o"
+  "/Users/pavelmamaev/GIT/computer-graphics/Scene.cpp" "/Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug/CMakeFiles/rt.dir/Scene.cpp.o"
+  "/Users/pavelmamaev/GIT/computer-graphics/main.cpp" "/Users/pavelmamaev/GIT/computer-graphics/cmake-build-debug/CMakeFiles/rt.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

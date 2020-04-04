@@ -6,6 +6,8 @@
 #include <cassert>
 #include <iostream>
 
+
+
 template<size_t DIM, typename T>
 struct vec {
     vec() {

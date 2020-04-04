@@ -3,7 +3,6 @@
 
 CMakeFiles/rt.dir/Bitmap.cpp.o: ../Bitmap.cpp
 
-CMakeFiles/rt.dir/Scene.cpp.o: ../Bitmap.h
 CMakeFiles/rt.dir/Scene.cpp.o: ../Scene.cpp
 CMakeFiles/rt.dir/Scene.cpp.o: ../mygeometry.h
 
