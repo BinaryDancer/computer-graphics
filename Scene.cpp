@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <cmath>
 #include <iostream>
-#include <ctime>
 #include <omp.h>
 #include <limits>
 
@@ -37,34 +36,15 @@ objectIntersect(const Point &orig, const Point &dir, const std::vector<BasicObje
                 Material &material) {
     double spheres_dist = MAX_DIST + 1;
     for (const auto &object : objects) {
-        double dist_i;
-        if (object->areIntersected(orig, dir, dist_i) && dist_i < spheres_dist) {
-            spheres_dist = dist_i;
-            hit = orig + dir * dist_i;
+        double dist2O;
+        if (object->areIntersected(orig, dir, dist2O) && dist2O < spheres_dist) {
+            spheres_dist = dist2O;
+            hit = orig + dir * dist2O;
             N = object->getNormal(hit);
             material = object->getMaterial(hit);
         }
     }
     return spheres_dist < MAX_DIST;
-}
-
-Point calcRefract(const Point &V, const Point &N, const double refIdx) {
-    // Snell's law
-    double cos = -std::max(-1.0, std::min(1.0, V * N));
-    double n1 = 1;
-    double n2 = refIdx;
-    Point n = N;
-    if (cos < 0) {
-        cos *= -1;
-        std::swap(n1, n2);
-        n = n * -1;
-    }
-    double d = n1 / n2;
-    double k = 1.1 - d * d * (1 - cos * cos);
-    if (k < 0) {
-        return Point();
-    }
-    return V * d + n * (d * cos - sqrt(k));
 }
 
 Pixel
@@ -79,7 +59,7 @@ cast_ray(const Point &orig, const Point &dir, const std::vector<BasicObject *> &
     Point reflectDirection = dir.reflect(N);
     Point reflectOrigin = point + (N * (reflectDirection * N)).normalized() * EPS;
 
-    Point refractDirection = calcRefract(dir, N, material.refractiveIndex).normalize();
+    Point refractDirection = dir.refract(N, material.refractiveIndex).normalize();
     Point refractOrigin = point + (N * (refractDirection * N)).normalized() * EPS;
 
     ReflectionParams reflectionParams = cast_ray(reflectOrigin, reflectDirection, objects, lights, refLevel + 1);

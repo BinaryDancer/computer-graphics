@@ -44,6 +44,24 @@ public:
         return *this - N * 2.0 * (*this * N);
     }
 
+    Triple<T> refract(const Triple<T> &N, const double refIdx) const {
+        // Snell's law
+        double cos = -std::max(-1.0, std::min(1.0, *this * N));
+        double n1 = 1, n2 = refIdx;
+        Triple<T> n = N;
+        if (cos < 0) {
+            cos *= -1;
+            std::swap(n1, n2);
+            n = n * -1;
+        }
+        double d = n1 / n2;
+        double k = 1.1 - d * d * (1 - cos * cos);
+        if (k < 0) {
+            return Triple<T>();
+        }
+        return *this * d + n * (d * cos - sqrt(k));
+    }
+
     T operator*(const Triple<T> &right) const {
         T result = T();
         for (size_t i = 0; i < 3; ++i) {

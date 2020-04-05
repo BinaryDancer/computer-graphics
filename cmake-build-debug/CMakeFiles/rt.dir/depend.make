@@ -5,7 +5,6 @@ CMakeFiles/rt.dir/Bitmap.cpp.o: ../Bitmap.cpp
 
 CMakeFiles/rt.dir/Scene.cpp.o: ../Scene.cpp
 CMakeFiles/rt.dir/Scene.cpp.o: ../mygeometry.h
-CMakeFiles/rt.dir/Scene.cpp.o: /usr/local/include/omp.h
 
 CMakeFiles/rt.dir/main.cpp.o: ../Bitmap.h
 CMakeFiles/rt.dir/main.cpp.o: ../Scene.h

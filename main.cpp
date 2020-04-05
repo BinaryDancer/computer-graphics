@@ -109,17 +109,17 @@ int main(int argc, const char **argv) {
         Triangle wall_mir1 = Triangle(Point(-3.0, 0.0, -19.99999), Point(3.0, 0.0, -19.99999),
                                       Point(3.0, 5.0, -19.99999),
                                       mirror);
+        objects.push_back(&wall_mir1);
         Triangle wall_mir2 = Triangle(Point(-3.0, 5.0, -19.99999), Point(-3.0, 0.0, -19.99999),
                                       Point(3.0, 5.0, -19.99999),
                                       mirror);
+        objects.push_back(&wall_mir2);
         Triangle floor_triangle1 = Triangle(Point(-3.0, -7.0, -20.0), Point(0.0, -7.0, -17.0), Point(0.0, -3.0, -20.0),
                                             red_matte_wall);
+        objects.push_back(&floor_triangle1);
         Triangle floor_triangle2 = Triangle(Point(3.0, -7.0, -20.0), Point(0.0, -3.0, -20.0), Point(0.0, -7.0, -17.0),
                                             red_matte_wall);
-        objects.push_back(&floor_triangle1);
         objects.push_back(&floor_triangle2);
-        objects.push_back(&wall_mir1);
-        objects.push_back(&wall_mir2);
 
         std::vector<Light> lights;
         lights.emplace_back(Point(-5, 4, -10), 1.8);
