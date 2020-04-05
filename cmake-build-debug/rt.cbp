@@ -94,13 +94,7 @@
 		<Unit filename="/Users/pavelmamaev/GIT/computer-graphics/Scene.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/pavelmamaev/GIT/computer-graphics/geometry.h">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/pavelmamaev/GIT/computer-graphics/main.cpp">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/pavelmamaev/GIT/computer-graphics/mygeometry.h">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/pavelmamaev/GIT/computer-graphics/CMakeLists.txt">

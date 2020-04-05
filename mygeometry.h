@@ -3,9 +3,7 @@
 
 #include <cstdlib>
 #include <cmath>
-#include <climits>
-#include <cassert>
-#include <utility>
+#include <limits>
 
 constexpr double EPS = 0.0001;
 constexpr int refComplexity = 4;
@@ -125,7 +123,16 @@ struct Material {
     }
 };
 
-class Sphere {
+class BasicObject {
+public:
+    virtual Material getMaterial(Point &p) const = 0;
+
+    virtual Point getNormal(Point &p) const = 0;
+
+    virtual bool areIntersected(const Point &beamPoint, const Point &direction, double &t0) const = 0;
+};
+
+class Sphere : public BasicObject {
     Point center;
     double radius;
     Material material;
@@ -145,31 +152,19 @@ public:
         if (t0 < 0) {
             t0 = t1;
         }
-        return !(t0 < 0);
+        return t0 >= 0;
     }
 
-    Point getCenter() const {
-        return center;
+    Point getNormal(Point &p) const {
+        return (p - center).normalized();
     }
 
-    double getR() const {
-        return radius;
-    }
-
-    Material getMaterial() const {
+    Material getMaterial(Point &p) const {
         return material;
-    }
-
-    DiffusiveParams getDiffusiveParams() const {
-        return material.diffusiveParams;
-    }
-
-    ReflectionParams getReflectionParams() const {
-        return material.reflectionParams;
     }
 };
 
-class Plane {
+class Plane : public BasicObject {
     Point normal;
     Point point;
     Material material1;
@@ -180,25 +175,66 @@ public:
     }
 
     Material getMaterial(Point &p) const {
-        return (((int) (0.4 * p[0] + 100) + (int) (0.4 * p[2])) % 2) ? material1 : material2;
+        return (((int) (0.5 * p[0] + 1000) + (int) (0.5 * p[2])) % 2) ? material1 : material2;
     }
 
-    Point getNormal() const {
+    Point getNormal(Point &p) const {
         return normal;
     }
 
-    Point getPoint() const {
-        return point;
+    bool areIntersected(const Point &beamPoint, const Point &direction, double &t0) const {
+        if (std::abs(direction * normal) > EPS / 100) {
+            double plane_dist = -((beamPoint - point) * normal) / (direction * normal);
+            if (plane_dist > 0) {
+                t0 = plane_dist;
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
+    }
+};
+
+class Triangle : public BasicObject {
+    Point p0, p1, p2;
+    Material material;
+
+    Point helpNormal(Point v1, Point v2) const {
+        return Point(v1[1] * v2[2] - v1[2] * v2[1], v1[2] * v2[0] - v1[0] * v2[2], v1[0] * v2[1] - v1[1] * v2[0]);
+    }
+public:
+    Triangle(const Point &p0 = {}, const Point &p1 = {}, const Point &p2 = {}, const Material &mat = {}) :
+            p0(p0), p1(p1), p2(p2), material(mat) {
+    }
+
+    Material getMaterial(Point &p) const {
+        return material;
+    }
+
+    Point getNormal(Point &p) const {
+        return helpNormal(p1 - p0, p2 - p0).normalized();
     }
 
     bool areIntersected(const Point &beamPoint, const Point &direction, double &t0) const {
-        if (std::abs(direction * normal) > EPS) {
-            double plane_dist = -1.0 * ((beamPoint - point) * normal) / (direction * normal);
-            if (plane_dist > 0)
-                t0 = plane_dist;
-            return true;
+        Point e1 = p1 - p0, e2 = p2 - p0;
+        Point v1 = helpNormal(direction, e2);
+        double d = e1 * v1;
+        if (std::abs(d) < EPS) {
+            return false;
         }
-        return false;
+        Point v2 = beamPoint - p0;
+        double u = v2 * v1;
+        if (u < 0 || u > d) {
+            return false;
+        }
+        Point v3 = helpNormal(v2, e1);
+        double v = direction * v3;
+        if (v < 0 || u + v > d) {
+            return false;
+        }
+        t0 = e2 * v3 * (1.0 / d);
+        return true;
     }
 };
 

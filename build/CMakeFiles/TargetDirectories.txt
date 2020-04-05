@@ -1,0 +1,3 @@
+/Users/pavelmamaev/GIT/computer-graphics/build/CMakeFiles/rebuild_cache.dir
+/Users/pavelmamaev/GIT/computer-graphics/build/CMakeFiles/edit_cache.dir
+/Users/pavelmamaev/GIT/computer-graphics/build/CMakeFiles/rt.dir
