@@ -6,35 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/Users/pavelmamaev/GIT/computer-graphics/Scene.cpp
-vector
--
-cstdlib
--
-cmath
--
-iostream
--
-ctime
--
-omp.h
--
-limits
--
+/Users/pavelmamaev/GIT/computer-graphics/Bitmap.h
+
+/Users/pavelmamaev/GIT/computer-graphics/Scene.h
 mygeometry.h
 /Users/pavelmamaev/GIT/computer-graphics/mygeometry.h
 
+/Users/pavelmamaev/GIT/computer-graphics/main.cpp
+iostream
+-
+cstdint
+-
+string
+-
+vector
+-
+unordered_map
+-
+Bitmap.h
+/Users/pavelmamaev/GIT/computer-graphics/Bitmap.h
+Scene.h
+/Users/pavelmamaev/GIT/computer-graphics/Scene.h
+
 /Users/pavelmamaev/GIT/computer-graphics/mygeometry.h
 cstdlib
 -
 cmath
 -
 limits
--
-
-/usr/local/include/omp.h
-stdlib.h
--
-stdint.h
 -
 

@@ -126,6 +126,8 @@ int main(int argc, const char **argv) {
         lights.emplace_back(Point(5, 4, -10), 1.8);
 
         image = scene(objects, lights, width, height, threads);
+    } else {
+        return 0;
     }
 
     SaveBMP(outFilePath.c_str(), image.data(), width, height);
